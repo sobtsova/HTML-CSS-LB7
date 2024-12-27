@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE BIG 4</title>
+    <link rel="stylesheet" href="stylesGRID.css"> 
+    <style>
+        #work {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: calc(50vw + 10px);
+            height: calc(70vh + 50px);
+            border: 2px black;
+            background-color: #000000;
+            z-index: 10;
+        }
+        #square {
+            width: 10px; 
+            height: 10px;
+            background-color: red; 
+            position: absolute;
+            z-index: 10;
+        }
+        #anim {
+            width: 50%;
+            height: 70%;
+            background: url('texture.png') repeat;
+            border: 5px solid bisque;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        #controls {
+            width: calc(100% - 50%);
+            height: calc(100% - 70%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 10px;
+        }
+        .button {
+            padding: 5px 10px;
+            margin: 5px;
+            background-color: gray;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: darkgray;
+        }
+        #messages {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        #event-log {
+            margin-top: 20px;
+            border: 1px solid black;
+            padding: 10px;
+            background-color: #f9f9f9;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        #event-log table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        #event-log th, #event-log td {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: left;
+        }
+        #messages-box {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 20%;
+            background-color: darkred;
+            color: white;
+            padding: 10px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body class="megadeth-page">
+
+    <div class="container">
+        <div class="block1">
+            <h1>THE BIG 4</h1> 
+        </div>
+        <div class="block2">
+            <p>Thrash metal</p></a>
+        </div>
+        <div class="block3">
+            <p>The "Big Four" of thrash metal—Metallica, Slayer, Megadeth, and Anthrax—are considered the most influential bands in the genre. Their groundbreaking albums, such as Metallica’s Master of Puppets and Slayer’s Reign in Blood, set new standards for speed, complexity, and lyrical themes, making them legends of the heavy metal scene. </p>
+        </div>
+        <div class="block4">
+            <p>Formed in the early 1980s, the "Big Four" of thrash metal—Metallica, Slayer, Megadeth, and Anthrax—rose from the gritty underground scene to become global icons of heavy metal. These bands pushed the boundaries of speed, aggression, and lyrical content, creating a raw and intense style that set them apart from traditional heavy metal. Not only did they pioneer thrash metal’s unique sound, but they also helped shape the genre’s identity, introducing it to mainstream audiences through groundbreaking albums, relentless touring, and unforgettable live performances. Their influence culminated in headlining massive festivals, such as the historic "Big Four" concert in 2010, and selling millions of albums worldwide, solidifying their legacy as the true giants of thrash metal.</p>
+        </div>
+        <div class="block5">
+            <button id="play" class="button">Play</button>
+            <div id="event-log" style="display: none;">
+                <h3>Event Log</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Local Storage</th>
+                            <th>Server</th>
+                        </tr>
+                    </thead>
+                    <tbody id="log-entries"></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="block6">
+            <p>The "Big Four" bands revolutionized thrash metal with their raw energy and powerful stage presence. Metallica brought complex songwriting, Slayer added brutal speed, Megadeth highlighted technical proficiency, and Anthrax introduced a mix of punk and metal elements, together shaping the face of modern metal music.</p>
+        </div>
+        <div class="block7">
+            <h2>Contact us for more info: || Insta: TheBig4 || Email: TheBig4@gmail.com || Phone: +1 386 543-73-21</h2>
+        </div>
+    </div>
+    <div id="work">
+        <div id="controls">
+            <button id="start" class="button">Start</button>
+            <button id="stop" class="button" style="display: none;">Stop</button>
+            <button id="reload" class="button" style="display: none;">Reload</button>
+            <button id="close" class="button" style="display: block;">Close</button>
+        </div>
+        <div id="anim"></div>
+        <div id="messages-box">
+            <div id="messages"></div>
+        </div>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>

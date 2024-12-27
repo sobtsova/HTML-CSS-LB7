@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        "block1 block1 block1"
+        "block2 block3 block4"
+        "block2 block5 block4"
+        "block6 block6 block4"
+        "block7 block7 block7";
+    width: 100vw; 
+    height: 100vh; 
+    grid-template-rows: 0.5fr 1fr 2fr 1fr 0.5fr; 
+    grid-template-columns: 1fr 1fr 1fr; 
+}
+
+.block1 {
+    grid-area: block1;
+    display: grid;
+    background-color: #000000;
+    padding-right: 20px; 
+    align-items: center;
+}
+
+.block2 {
+    grid-area: block2;
+    background-color: #696969;
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+
+.block2 .navigation ul {
+    list-style-type: none; 
+    padding: 0;
+}
+
+.block2 .navigation ul li {
+    margin: 5px 0; 
+}
+
+.block2 .navigation ul li a {
+    text-decoration: none; 
+    display: inline-block; 
+    padding: 5px 10px; 
+}
+
+.block2 .navigation ul li a:hover {
+    text-decoration: underline;
+    color: #000000; 
+}
+
+.block2 .navigation ul li a.active {
+    background-color: #484848; 
+    color: #ffffff; 
+    border-radius: 5px; 
+}
+
+.block3 {
+    grid-area: block3;
+    background-color: #484848;
+    display: grid;
+    align-items: center; 
+}
+
+.block4 {
+    grid-area: block4;
+    background-color: #696969;
+    padding: 10px;
+    text-align: justify;
+    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+}
+
+.block5 {
+    grid-area: block5;
+    background-color: #000000;
+    display: grid;
+    overflow: hidden; 
+    justify-content: center;
+    align-items: center;
+}
+
+.block5 img {
+    max-width: 100%; 
+    max-height: 100%; 
+}
+
+.block6 {
+    grid-area: block6;
+    background-color: #484848;
+    display: grid;
+    align-items: center;
+}
+
+.block7 {
+    grid-area: block7;
+    display: grid;
+    background-color: #000000;
+    padding-right: 20px;
+    align-items: center;
+}
+
+.block1 h1, .block7 h2 {
+    justify-self: end;
+}
+
+h1 {
+    color: #696969; 
+    font-size: 36px; 
+    font-family: Verdana, sans-serif; 
+    
+}
+
+h2 {
+    color: #696969; 
+    font-size: 20px; 
+    font-family: 'Verdana', serif; 
+}
+
+p {
+    color: #000000; 
+    font-size: 18px; 
+    font-family: 'Verdana', sans-serif; 
+    padding: 30px; 
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+    display: grid;
+    grid-template-areas:
+        "block1"
+        "block6"
+        "block5"
+        "block2"
+        "block3"
+        "block4"
+        "block7";
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    width: 100%; 
+    height: auto;
+}
+
+/* Загальні стилі блоків */
+.container > div {
+    padding: 10px;
+    text-align: center;
+}
+
+.block1 {
+    justify-content: center;
+}
+
+.block1 h1 {
+    color: #696969;
+    font-size: 28px; 
+}
+
+.block3, .block4, .block6 {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.block7 h2 {
+    font-size: 14px;
+    color: #696969;
+}
+}
